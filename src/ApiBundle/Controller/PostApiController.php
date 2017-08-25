@@ -32,6 +32,9 @@ class PostApiController extends FOSRestController
      *          "class"="array<AppBundle\Entity\Post>",
      *          "groups"={"post-list"}
      *      },
+     *      filters={
+     *          {"name"="query", "dataType"="string"}
+     *      },
      *      statusCodes={
      *          200="Returned when successful",
      *          500="Returned when other error occurs"
