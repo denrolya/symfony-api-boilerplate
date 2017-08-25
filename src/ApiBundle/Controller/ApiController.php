@@ -13,8 +13,8 @@ class ApiController extends FOSRestController
      *
      * @ApiDoc(
      *      resource=true,
-     *      section="Products",
-     *      description="getTestDataAction",
+     *      section="Test",
+     *      description="Get test data",
      *      tags={"test"="#93c00b"}
      * )
      * @Get("/test")
