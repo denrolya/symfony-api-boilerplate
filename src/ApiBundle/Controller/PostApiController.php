@@ -11,7 +11,8 @@ namespace ApiBundle\Controller;
 use AppBundle\Entity\Post as PostEntity;
 use AppBundle\Form\PostType;
 use FOS\RestBundle\Controller\Annotations\Get, FOS\RestBundle\Controller\Annotations\Post,
-    FOS\RestBundle\Controller\Annotations\Delete, FOS\RestBundle\Controller\Annotations\View;
+    FOS\RestBundle\Controller\Annotations\Delete, FOS\RestBundle\Controller\Annotations\View,
+    FOS\RestBundle\Controller\Annotations\QueryParam;
 use FOS\RestBundle\Controller\FOSRestController;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use FOS\RestBundle\View\View as ViewTemplate;
@@ -39,10 +40,13 @@ class PostApiController extends FOSRestController
      * )
      * @View(serializerGroups={"post-list"})
      * @Get("/")
+     * @QueryParam(name="query", requirements=".*", default="", description="Search query")
      */
-    public function getPostsAction()
+    public function getPostsAction($query)
     {
-        $posts = $this->getDoctrine()->getRepository(PostEntity::class)->findAll();
+        $posts = (empty($query))
+            ? $this->getDoctrine()->getRepository(PostEntity::class)->findAll()
+            : $this->get('app.search')->findPostsByQuery($query);
 
         return [
             'posts' => $posts
