@@ -37,7 +37,7 @@ class Post
     /**
      * @var string
      *
-     * @JMS\Groups({"post-list", "post-view"})
+     * @JMS\Groups({"post-view"})
      * @ORM\Column(name="body", type="text")
      */
     private $body;
