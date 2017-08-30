@@ -11,10 +11,10 @@
         {% block stylesheets %}
             {% stylesheets
             'assets/vendor/angular-material/angular-material.min.css'
-            'assets/stylesheets/app.css'
             'assets/vendor/angular-material-admin/src/app/libs/ag-grid/styles/theme-fresh.css'
             'assets/vendor/angular-material-admin/bower_components/nvd3/build/nv.d3.min.css'
             'assets/vendor/md-data-table/dist/md-data-table-style.css'
+            'assets/stylesheets/app.css'
             filter='cssrewrite' output='css/compiled/base_admin.css' %}
             <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
             {% endstylesheets %}
@@ -25,9 +25,11 @@
         {% block body %}{% endblock body %}
 
         <!--[if lt IE 10]>
-        <p>You are using an <strong>outdated</strong> browser. Please
-            <a href="http://browsehappy.com/">upgrade your browser</a>
-            to improve your experience.</p>
+            <p>
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="http://browsehappy.com/">upgrade your browser</a>
+                to improve your experience.
+            </p>
         <![endif]-->
 
         <div ui-view layout="row" layout-fill></div>
@@ -53,6 +55,7 @@
             'assets/app.js'
 
             'assets/app/controllers/MainController.js'
+            'assets/app/controllers/TableController.js'
             'assets/app/controllers/DataTableController.js'
             'assets/app/controllers/MessagesController.js'
             'assets/app/controllers/VisitorsController.js'

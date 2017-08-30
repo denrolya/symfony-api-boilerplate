@@ -10,7 +10,7 @@ class AppController extends Controller
 {
     /**
      * @Template("::base.html.twig")
-     * @Route("/admin")
+     * @Route("/")
      */
     public function adminAction()
     {
