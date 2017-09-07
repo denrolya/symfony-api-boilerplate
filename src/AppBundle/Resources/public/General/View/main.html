@@ -1,27 +1,30 @@
-<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left"
-            class="md-whiteframe-z2 md-sidenav-left">
-  <md-toolbar md-theme="custom" class="md-hue-1 md-whiteframe-z2">
-    <md-button layout="row" layout-align="center center" class="md-toolbar-tools md-warn"
-               href="https://github.com/flatlogic/angular-material-dashboard">
-      <h1>TEST</h1>
-    </md-button>
-  </md-toolbar>
-      <md-button ng-repeat-start="item in vm.menuItems" layout="column" layout-align="center center"
-                 flex class="capitalize" ng-click="vm.selectItem(item)"
-                 ui-sref-active="md-warn" ui-sref="{{item.sref}}">
-          <div hide-sm hide-md class="md-tile-content">
-              <i class="material-icons md-36">{{item.icon}}</i>
-          </div>
-          <div class="md-tile-content">
-              {{item.name}}
-          </div>
-      </md-button>
-      <md-divider ng-repeat-end></md-divider>
-      <md-button ng-click="vm.showActions($event)" layout-align="center center">
-          <div class="md-tile-content">
-            Actions
-          </div>
-      </md-button>
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')"
+            md-component-id="left"
+            class=" md-sidenav-left" md-whiteframe="4">
+    <md-toolbar md-theme="custom" class="md-hue-1 md-whiteframe-z2">
+        <md-button layout="row"
+                   layout-align="center center" class="md-toolbar-tools md-warn"
+                href="https://github.com/flatlogic/angular-material-dashboard">
+            <h1>TEST</h1>
+        </md-button>
+    </md-toolbar>
+    <md-list>
+        <md-list-item
+                ng-repeat="item in vm.menuItems"
+                ng-click="vm.selectItem(item)"
+                ui-sref-active="md-warn"
+                ui-sref="{{ item.state }}">
+            <div class="md-list-item-text">
+                <p class="md-tile-content">
+                    <i class="material-icons" hide-sm hide-md>{{ item.icon }}</i> {{ item.name }}
+                </p>
+            </div>
+        </md-list-item>
+        <md-divider ></md-divider>
+        <md-list-item ng-click="vm.showActions($event)" layout-align="center center">
+            <span>Action</span>
+        </md-list-item>
+    </md-list>
 </md-sidenav>
 
 <div layout="column" flex>
@@ -74,6 +77,6 @@
                 <h3>Messages</h3>
             </div>
         </md-toolbar>
-        <div ng-include src="'/assets/app/views/partials/messages.html'"/>
+        <div ng-include src="'/bundles/app/General/View/Partials/messages.html'"/>
     </section>
 </md-sidenav>

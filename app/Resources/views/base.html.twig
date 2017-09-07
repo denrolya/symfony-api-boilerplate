@@ -4,8 +4,10 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock title %}</title>
         <meta name="description" content="Admin dashboard with material design">
-        <meta name="author" content="rdenes93@gmail.com">
+        <meta name="author" content="denrolya@gmail.com">
         <meta name="viewport" content="width=device-width">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         {% block stylesheets %}
@@ -13,8 +15,8 @@
             'assets/vendor/angular-material/angular-material.min.css'
             'assets/vendor/angular-material-admin/src/app/libs/ag-grid/styles/theme-fresh.css'
             'assets/vendor/angular-material-admin/bower_components/nvd3/build/nv.d3.min.css'
-            'assets/vendor/md-data-table/dist/md-data-table-style.css'
-            'assets/stylesheets/app.css'
+            'assets/vendor/angular-material-data-table/dist/md-data-table.min.css'
+            'bundles/app/stylesheets/app.css'
             filter='cssrewrite' output='css/compiled/base_admin.css' %}
             <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
             {% endstylesheets %}
@@ -40,6 +42,7 @@
             'assets/vendor/angular/angular.min.js'
             'assets/vendor/angular-animate/angular-animate.min.js'
             'assets/vendor/angular-cookies/angular-cookies.js'
+            'assets/vendor/angular-resource/angular-resource.min.js'
             'assets/vendor/angular-touch/angular-touch.min.js'
             'assets/vendor/angular-sanitize/angular-sanitize.min.js'
             'assets/vendor/angular-ui-router/release/angular-ui-router.min.js'
@@ -52,29 +55,26 @@
             'assets/vendor/angular-aria/angular-aria.min.js'
             'assets/vendor/angular-material-data-table/dist/md-data-table.min.js'
 
-            'assets/app.js'
+            'bundles/app/General/App.js'
+            'bundles/app/General/Controller/MainController.js'
+            'bundles/app/Post/Controller/PostListController.js'
+            'bundles/app/General/Controller/MessagesController.js'
+            'bundles/app/General/Controller/VisitorsController.js'
+            'bundles/app/General/Controller/WarningsController.js'
+            'bundles/app/General/Controller/MemoryController.js'
+            'bundles/app/General/Controller/ControlPanelController.js'
+            'bundles/app/General/Controller/UsageController.js'
+            'bundles/app/General/Controller/SearchController.js'
+            'bundles/app/General/Controller/ProfileController.js'
+            'bundles/app/General/Component/Directive/panelWidget.js'
+            'bundles/app/General/Component/Service/NavService.js'
+            'bundles/app/General/Component/Service/CountriesService.js'
+            'bundles/app/General/Component/Service/TableService.js'
+            'bundles/app/General/Component/Service/MessagesService.js'
 
-            'assets/app/controllers/MainController.js'
-            'assets/app/controllers/TableController.js'
-            'assets/app/controllers/DataTableController.js'
-            'assets/app/controllers/MessagesController.js'
-            'assets/app/controllers/VisitorsController.js'
-            'assets/app/controllers/WarningsController.js'
-            'assets/app/controllers/MemoryController.js'
-            'assets/app/controllers/ControlPanelController.js'
-            'assets/app/controllers/UsageController.js'
-            'assets/app/controllers/SearchController.js'
-            'assets/app/controllers/PerformanceController.js'
-            'assets/app/controllers/TodoController.js'
-            'assets/app/controllers/ProfileController.js'
-
-            'assets/app/components/directives/panelWidget.js'
-            'assets/app/components/services/NavService.js'
-            'assets/app/components/services/TodoListService.js'
-            'assets/app/components/services/PerformanceService.js'
-            'assets/app/components/services/CountriesService.js'
-            'assets/app/components/services/TableService.js'
-            'assets/app/components/services/MessagesService.js'
+            'bundles/app/Post/Post.js'
+            'bundles/app/Post/Controller/PostListController.js'
+            'bundles/app/Post/Resource/PostResource.js'
             output='js/compiled/app.js' %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
             {% endjavascripts %}

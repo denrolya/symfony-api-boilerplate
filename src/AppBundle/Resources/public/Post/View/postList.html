@@ -1,0 +1,29 @@
+<section>
+    <md-toolbar class="md-table-toolbar md-default">
+        <div class="md-toolbar-tools">
+            <span>Posts</span>
+        </div>
+    </md-toolbar>
+
+    <!-- exact table from live demo -->
+    <md-table-container>
+        <table md-table md-row-select multiple ng-model="vm.selected" md-progress="vm.promise">
+            <thead md-head md-order="vm.query.order">
+            <tr md-row>
+                <th md-column md-numeric md-order-by="id"><span>ID</span></th>
+                <th md-column md-order-by="title"><span>Title</span></th>
+                <th md-column md-order-by="updatedAt">Date</th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="post in vm.posts | limitTo : vm.query.limit : (vm.query.page - 1)*vm.query.limit">
+                <td md-cell>{{ post.id }}</td>
+                <td md-cell>{{ post.title }}</td>
+                <td md-cell>{{ post.modifiedAt | date : 'MMM d.,yyyy' }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+    <md-table-pagination md-limit="vm.query.limit" md-limit-options="[5, 10, 15]" md-page="vm.query.page" md-total="{{ vm.posts.length }}" md-on-paginate="vm.getPosts" md-page-select></md-table-pagination>
+</section>

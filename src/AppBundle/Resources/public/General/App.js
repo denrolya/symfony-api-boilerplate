@@ -1,50 +1,33 @@
 'use strict';
 
-angular.module('app', ['ngAnimate', 'ngCookies', 'ngSanitize', 'ui.router', 'ngMaterial',
+angular
+    .module('app', ['ngResource', 'ngAnimate', 'ngCookies', 'ngSanitize', 'ui.router', 'ngMaterial',
     'nvd3', 'ngMaterial', 'md.data.table'])
 
     .config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider,
                       $mdIconProvider) {
         $stateProvider
-            .state('home', {
+            .state('app', {
                 url: '',
-                templateUrl: '/assets/app/views/main.html',
+                templateUrl: '/bundles/app/General/View/main.html',
                 controller: 'MainController',
                 controllerAs: 'vm',
                 abstract: true
             })
-            .state('home.dashboard', {
+            .state('app.dashboard', {
                 url: '/dashboard',
-                templateUrl: '/assets/app/views/dashboard.html',
+                templateUrl: '/bundles/app/General/View/dashboard.html',
                 data: {
                     title: 'Dashboard'
                 }
             })
-            .state('home.profile', {
+            .state('app.profile', {
                 url: '/profile',
-                templateUrl: '/assets/app/views/profile.html',
+                templateUrl: '/bundles/app/General/View/profile.html',
                 controller: 'ProfileController',
                 controllerAs: 'vm',
                 data: {
                     title: 'Profile'
-                }
-            })
-            .state('home.table', {
-                url: '/table',
-                controller: 'TableController',
-                controllerAs: 'vm',
-                templateUrl: '/assets/app/views/table.html',
-                data: {
-                    title: 'Table'
-                }
-            })
-            .state('home.data-table', {
-                url: '/data-table',
-                controller: 'DataTableController',
-                controllerAs: 'vm',
-                templateUrl: '/assets/app/views/data-table.html',
-                data: {
-                    title: 'Table'
                 }
             });
 

@@ -23,6 +23,7 @@
 
 # Assets vendors
 /web/assets/vendor/
+/node_modules/
 
 # Compiled assets
 /web/css/
