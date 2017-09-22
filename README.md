@@ -26,4 +26,7 @@ symfony-api-boilerplate
     alias cl='bc cache:clear'
     alias clall='cl -e prod && cl && cl -e test'
     alias fadb='bc doctrine:database:drop -e test --force && bc doctrine:database:create -e test && bc doctrine:schema:create -e test && bc hautelook_alice:doctrine:fixtures:load -e test'
-    alias fixtures='bc hautelook_alice:doctrine:fixtures:load --no-interaction' 
+    alias fixtures='bc hautelook_alice:doctrine:fixtures:load --no-interaction'
+    
+   #### Links to check
+   [Angular Git Commit Messages Guideline](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit) 
