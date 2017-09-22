@@ -26,4 +26,6 @@
     alias fixtures='bc hautelook_alice:doctrine:fixtures:load --no-interaction'
     
    #### Links to check
-   [Angular Git Commit Messages Guideline](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit) 
+   * [Apache configuration](http://symfony.com/doc/current/setup/web_server_configuration.html)
+   * [Symfony permissions fix](https://symfony.com/doc/current/setup/file_permissions.html)
+   * [Angular Git Commit Messages Guideline](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit) 
