@@ -1,11 +1,8 @@
-symfony-api-boilerplate
-=======================
-
-## Requirements
+## Additional requirements
 * [Elasticsearch 5+](https://www.elastic.co/downloads/elasticsearch)
 
 ## Installation
-1. $: composer install
+1. $: `composer install`
     * Set only the database parameters, skip the others
 2. $: `bin/console doctrine:database:create && bin/console doctrine:schema:create && bin/console hautelook_alice:doctrine:fixtures:load --no-interaction`
     * This creates the database, populates it with test data && automatically indexes them with elasticsearch
