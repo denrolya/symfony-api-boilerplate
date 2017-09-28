@@ -112,9 +112,17 @@ angular-animate@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.6.tgz#6925647b141a040d241bf125040f1a150fcd8a70"
 
+angular-animate@~1.5.8:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.5.11.tgz#1baa43c303d1b93c4e6aa89453b39114b7a1c669"
+
 angular-aria@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.6.tgz#58dd748e09564bc8409f739bde57b35fbee5b6a5"
+
+angular-aria@~1.5.8:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.5.11.tgz#26963ac336891ced7b199e59afd7e9b25e53d6a6"
 
 angular-cookies@^1.6.6:
   version "1.6.6"
@@ -128,9 +136,27 @@ angular-material-data-table@^0.10.10:
   version "0.10.10"
   resolved "https://registry.yarnpkg.com/angular-material-data-table/-/angular-material-data-table-0.10.10.tgz#229b402745ec1a146f07da8d1e526be6540849ee"
 
+angular-material-icons@~v0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/angular-material-icons/-/angular-material-icons-0.6.0.tgz#6ef28ead1ecb79993937ac4b5b48aaee907e1b63"
+  dependencies:
+    angular ">1.3.x"
+
+angular-material@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.1.tgz#ed12f394ba71a9189d664115624f6787a7439af2"
+
 angular-material@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.4.tgz#27de35646f54ccd320080af0c708e1b438af87f6"
+
+angular-nvd3@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/angular-nvd3/-/angular-nvd3-1.0.9.tgz#8d8a71487d9e5a122e8a5d0f5cd26ab0e491a6f5"
+  dependencies:
+    angular "^1.x"
+    d3 "^3.3"
+    nvd3 "^1.7.1"
 
 angular-resource@^1.6.6:
   version "1.6.6"
@@ -139,6 +165,10 @@ angular-resource@^1.6.6:
 angular-sanitize@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.6.6.tgz#0fd065a19931517fbece66596d325d72b6e06041"
+
+angular-sanitize@~1.5.8:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.5.11.tgz#ebfb3f343e543f9b2ef050fb4c2e9ee048d1772f"
 
 angular-touch@^1.6.6:
   version "1.6.6"
@@ -150,9 +180,13 @@ angular-ui-router@^1.0.3:
   dependencies:
     "@uirouter/core" "5.0.3"
 
-angular@^1.6.6:
+angular@>1.3.x, angular@^1.6.6, angular@^1.x:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.6.tgz#fd5a3cfb437ce382d854ee01120797978527cb64"
+
+angular@~1.5.8:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.5.11.tgz#8c5ba7386f15965c9acf3429f6881553aada30d6"
 
 ansi-html@0.0.7:
   version "0.0.7"
@@ -1358,6 +1392,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
+d3@^3.3:
+  version "3.5.17"
+  resolved "https://registry.yarnpkg.com/d3/-/d3-3.5.17.tgz#bc46748004378b21a360c9fc7cf5231790762fb8"
+
 d@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/d/-/d-1.0.0.tgz#754bb5bfe55451da69a58b94d45f4c5b0462d58f"
@@ -2386,6 +2424,10 @@ jquery@^1.9.1:
   version "1.12.4"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-1.12.4.tgz#01e1dfba290fe73deba77ceeacb0f9ba2fec9e0c"
 
+jquery@~2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
+
 js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -2612,6 +2654,10 @@ lodash.uniq@^4.5.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
+lodash@~3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
 loglevel@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.4.1.tgz#95b383f91a3c2756fd4ab093667e4309161f2bcd"
@@ -2657,6 +2703,19 @@ map-obj@^1.0.0, map-obj@^1.0.1:
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
+
+md-data-table@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/md-data-table/-/md-data-table-2.2.0.tgz#f425529e10094bdb94bfa56a331a9b94a2e512f1"
+  dependencies:
+    angular "~1.5.8"
+    angular-animate "~1.5.8"
+    angular-aria "~1.5.8"
+    angular-material "1.1.1"
+    angular-material-icons "~v0.6.0"
+    angular-sanitize "~1.5.8"
+    jquery "~2.1.4"
+    lodash "~3.10.1"
 
 md5.js@^1.3.4:
   version "1.3.4"
@@ -2916,6 +2975,10 @@ num2fraction@^1.2.2:
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
+
+nvd3@^1.7.1:
+  version "1.8.6"
+  resolved "https://registry.yarnpkg.com/nvd3/-/nvd3-1.8.6.tgz#2d3eba74bf33363b5101ebf1d093c59a53ae73c4"
 
 oauth-sign@~0.8.1:
   version "0.8.2"
