@@ -2,7 +2,8 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@AppBundle/Resources/config/services.yml" }
+    - { resource: fos_elastica.yml }
+    - { resource: fos_rest.yml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -69,57 +70,18 @@ swiftmailer:
     password: '%mailer_password%'
     spool: { type: memory }
 
-# REST API Configuration
-fos_rest:
-    serializer:
-        groups: ["default"]
-        serialize_null: true
-    format_listener:
-        rules:
-            - { path: '^/api/v1', priorities: ['json'] }
-            - { path: '^/', stop: true }
-            - { path: '^/sitemap', priorities: ['xml'], fallback_format: xml, prefer_extension: true }
-    param_fetcher_listener: force
-    routing_loader:
-        include_format: false
-    view:
-        view_response_listener: 'force'
-        formats:
-            json: true
-            xml: false
-
 nelmio_api_doc: ~
 
-# Elasticsearch configuration
-fos_elastica:
-    clients:
-        default: { host: localhost, port: 9200 }
-    indexes:
-        example:
-            settings:
-                index:
-                    analysis:
-                        analyzer:
-                            test_analyzer:
-                                type: custom
-                                tokenizer: lowercase
-                                filter: [my_ngram, snowball]
-                        filter:
-                            my_ngram:
-                                type: "nGram"
-                                min_gram: 2
-                                max_gram: 20
-            index_name: example_%kernel.environment%
-            types:
-                post:
-                    properties:
-                        title: { analyzer: test_analyzer }
-                        body: ~
-                        createdAt: ~
-                        modifiedAt: ~
-                    persistence:
-                        driver: orm
-                        model: AppBundle\Entity\Post
-                        provider: ~
-                        listener: ~
-                        finder: ~
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: UserBundle\Entity\User
+    from_email:
+        address: '%mailer_user%'
+        sender_name: '%mailer_user%'
+
+lexik_jwt_authentication:
+    private_key_path: '%jwt_private_key_path%'
+    public_key_path: '%jwt_public_key_path%'
+    pass_phrase: '%jwt_key_pass_phrase%'
+    token_ttl: '%jwt_token_ttl%'
