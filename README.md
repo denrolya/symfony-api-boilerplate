@@ -7,6 +7,10 @@
 2. $: `bin/console doctrine:database:create && bin/console doctrine:schema:create && bin/console hautelook_alice:doctrine:fixtures:load --no-interaction`
     * This creates the database, populates it with test data && automatically indexes them with elasticsearch
     
+## Running frontend:
+1. Make sure your backend is served as expected
+2. Run `yarn run encore dev-server --hot` for development
+
 ## Description
 
    #### Third party bundles used:
