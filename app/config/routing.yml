@@ -1,12 +1,16 @@
+default:
+    resource:   '@AppBundle/Controller/DefaultController.php'
+    type:       annotation
+
 api:
     type:       rest
     prefix:     /api/v1
     resource:   '@ApiBundle/Resources/config/routes.yml'
 
+api_doc:
+    resource:   '@NelmioApiDocBundle/Resources/config/routing.yml'
+    prefix:     /api/v1/doc
+
 fos_user_security:
     resource: '@FOSUserBundle/Resources/config/routing/security.xml'
     prefix: /api/v1
-
-NelmioApiDocBundle:
-    resource:   '@NelmioApiDocBundle/Resources/config/routing.yml'
-    prefix:     /api/v1/doc
